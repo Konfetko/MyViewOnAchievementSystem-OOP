@@ -7,15 +7,16 @@ import com.yeroshevich.game.stats.Stats;
 import lombok.ToString;
 
 import java.util.List;
+import java.util.Set;
 
 @ToString
 public class Player {
     private final String username;
     private final Stats stats;
-    private final List<Achievement> achievements;
+    private final Set<Achievement> achievements;
 
 
-    public Player(String username, Stats stats, List<Achievement> achievements) {
+    public Player(String username, Stats stats, Set<Achievement> achievements) {
         this.username = username;
         this.stats=stats;
         this.achievements = achievements;
