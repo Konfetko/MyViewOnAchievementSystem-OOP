@@ -1,13 +1,19 @@
 package com.yeroshevich.game.achievements;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.yeroshevich.game.achievements.uniqueAchievements.BuffingAchievement;
+import lombok.ToString;
 
+import java.util.HashSet;
+import java.util.Set;
+@ToString
 public class AchievementManager {
-    private final List<Achievement> achievements=  new ArrayList<>();
-    public void completeAchievement(Achievement achievement){
-        achievement.useEffects();
+    private final Set<BuffingAchievement> achievements=  new HashSet<>();
+    public void completeAchievement(BuffingAchievement achievement){
+        if(!this.achievements.contains(achievement))
+            achievement.useEffects();
         this.achievements.add(achievement);
+
+
 
     }
 }
