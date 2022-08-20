@@ -16,16 +16,7 @@ import java.util.*;
 import java.util.regex.Pattern;
 
 public class Main {
-    static int[] twosum(int[] nums,int sum){
-        Map<Integer,Integer> complements = new HashMap<>();
-        for (int i = 0; i < nums.length; i++) {
-            Integer complementIndex = complements.get(nums[i]);
-            if(complementIndex!=null)
-                return new int[]{i,complementIndex};
-            complements.put(sum-nums[i],i);
-        }
-        return nums;
-    }
+  
     public static void main(String[] args) throws IOException, SQLException {
 
 
@@ -35,29 +26,7 @@ public class Main {
         manager.completeAchievement(new Achievement(player,"Потомок Давида",new StrengthBuff(5)));
         System.out.println(player);
 
-//        Set<User> users = new HashSet<>(); // при добавлении вызывается метод hashCode у каждого юзера,
-//                                            // если этот хэш одинаковый,то вызывается метод equals
-//        users.add(new User(1L,"A"));
-//        users.add(new User(1L,"B"));
-//        users.add(new User(2L,"C"));
-//
-//        for(var user:users){
-//            System.out.println(user);
-//        }
 
-
-        //HtmlTwitchParser parser = new HtmlTwitchParser("https://www.twitch.tv/directory/game/Just%20Chatting");
-//        HtmlTwitchParser parser = new HtmlTwitchParser("");
-//        parser.parse();
-
-//        InputStream stream = new FileInputStream(new File("src/main/resources/ArcheAge_sample.jpg"));
-//        var blob = new SerialBlob(stream.readAllBytes());
-//        System.out.println(blob);
-
-//        for (var i:twosum(new int[]{5,2,4},9)
-//             ) {
-//            System.out.println(i);
-//        }
     }
 
 }
